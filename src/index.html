@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="window" lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -12,8 +12,31 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <ul>
-      <li><a href="./searching.html">Searching</a></li>
-    </ul>
+    <!-- Форма пошуку -->
+    <form id="searchForm" class="search-form">
+      <label>
+        Search images:
+        <input type="text" id="searchInput" required />
+      </label>
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Зона для відображення повідомлень та індикатора завантаження -->
+    <div id="messageContainer" class="message-container"></div>
+    <div id="loader" class="loader"></div>
+
+    <!-- Галерея зображень -->
+    <div id="gallery" class="gallery"></div>
+
+    <!-- Підключення скриптів -->
+    <script type="module" src="./main.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"
+    ></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/simplelightbox/dist/simple-lightbox.min.js"
+    ></script>
   </body>
 </html>
