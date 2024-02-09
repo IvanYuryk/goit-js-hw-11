@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="window" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 11</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+      rel="stylesheet"
+    />
+    
+    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-46aac873.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-eb6030bc.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/index-3c4187b8.css">
+  </head>
+  <body>
+    <!-- Форма пошуку -->
+    <form id="searchForm" class="search-form">
+      <label>
+        Search images:
+        <input type="text" id="searchInput" required />
+      </label>
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Зона для відображення повідомлень та індикатора завантаження -->
+    <div id="messageContainer" class="message-container"></div>
+    <div id="loader" class="loader"></div>
+
+    <!-- Галерея зображень -->
+    <div id="gallery" class="gallery"></div>
+
+    <!-- Підключення скриптів -->
+    
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"
+    ></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/simplelightbox/dist/simple-lightbox.min.js"
+    ></script>
+  </body>
+</html>
