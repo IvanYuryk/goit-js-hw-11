@@ -1,4 +1,4 @@
-import{S as m,i as l}from"./assets/vendor-46aac873.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&r(i)}).observe(document,{childList:!0,subtree:!0});function n(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=n(e);fetch(e.href,t)}})();const p="/goit-js-hw-10/assets/dang-75a3a476.svg",g="/goit-js-hw-10/assets/err-d9947029.svg",c="/goit-js-hw-10/assets/x-a193917d.svg",d=new m(".gallery a",{captionDelay:250,captionsData:"alt"}),u=document.querySelector("#searchForm"),a=document.querySelector(".gallery");u.addEventListener("submit",f);function f(s){s.preventDefault();const o=s.target.keyword.value.trim();o&&(a.innerHTML='<span class="loader"></span>',h(o).then(n=>y(n)).catch(n=>b(n)),u.reset())}function h(s){const o="https://pixabay.com/",n="api/",r=new URLSearchParams({key:"YOUR_PIXABAY_API_KEY",q:s,image_type:"photo",orientation:"horizontal",safesearch:!0}),e=`${o}${n}?${r}`;return fetch(e).then(t=>{if(t.ok)return t.json();throw new Error(`${t.status} - ${t.statusText}`)})}function y({totalHits:s,hits:o}){if(parseInt(s)>0){const n=o.map(x).join("");a.innerHTML=n,d.refresh()}else a.innerHTML="",F()}function F(){l.warning({title:"Sorry,",titleColor:"#FFFFFF",message:"there are no images matching your search query. Please try again!",messageColor:"#FFFFFF",messageSize:"16px",backgroundColor:"#FFA000",iconUrl:p,position:"center",close:!1,buttons:[[`<button type="button" style="
+import{S as u,i as l}from"./assets/vendor-46aac873.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&i(s)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();const m=new u(".gallery a",{captionDelay:250,captionsData:"alt"}),c=document.querySelector("#searchForm"),a=document.querySelector(".gallery");c.addEventListener("submit",p);function p(n){n.preventDefault();const o=n.target.keyword.value.trim();o&&(a.innerHTML='<span class="loader"></span>',d(o).then(r=>g(r)).catch(r=>h(r)),c.reset())}function d(n){const o="https://pixabay.com/",r="api/",i=new URLSearchParams({key:"42208232-118910d8102453b47e924ae6c",q:n,image_type:"photo",orientation:"horizontal",safesearch:!0}),e=`${o}${r}?${i}`;return fetch(e).then(t=>{if(t.ok)return t.json();throw new Error(`${t.status} - ${t.statusText}`)})}function g({totalHits:n,hits:o}){if(parseInt(n)>0){const r=o.map(y).join("");a.innerHTML=r,m.refresh()}else a.innerHTML="",f()}function f(){l.warning({title:"Sorry,",titleColor:"#FFFFFF",message:"there are no images matching your search query. Please try again!",messageColor:"#FFFFFF",messageSize:"16px",backgroundColor:"#FFA000",iconUrl:dangIcon,position:"center",close:!1,buttons:[[`<button type="button" style="
           background-color: #FFA000; 
           width: 20px; 
           height: 20px; 
@@ -6,8 +6,8 @@ import{S as m,i as l}from"./assets/vendor-46aac873.js";(function(){const o=docum
             <img style="
               width: 10px; 
               height: 10px" 
-              src=${c}>
-        </button>`,function(s,o){s.hide({transitionOut:"fadeOut"},o)}]]})}function b(s){l.show({title:"Error",titleColor:"#FFFFFF",message:`${s}`,messageColor:"#FFFFFF",messageSize:"16px",backgroundColor:"#EF4040",iconUrl:g,position:"topRight",close:!1,buttons:[[`<button type="button" style="
+              src=${xIcon}>
+        </button>`,function(n,o){n.hide({transitionOut:"fadeOut"},o)}]]})}function h(n){l.show({title:"Error",titleColor:"#FFFFFF",message:`${n}`,messageColor:"#FFFFFF",messageSize:"16px",backgroundColor:"#EF4040",iconUrl:errorIcon,position:"topRight",close:!1,buttons:[[`<button type="button" style="
           background-color: #EF4040; 
           width: 20px; 
           height: 20px; 
@@ -15,16 +15,16 @@ import{S as m,i as l}from"./assets/vendor-46aac873.js";(function(){const o=docum
             <img style="
               width: 10px; 
               height: 10px" 
-                src=${c}>
-        </button>`,function(o,n){o.hide({transitionOut:"fadeOut"},n)}]]})}function x({webformatURL:s,largeImageURL:o,tags:n,likes:r,views:e,comments:t,downloads:i}){return`
+                src=${xIcon}>
+        </button>`,function(o,r){o.hide({transitionOut:"fadeOut"},r)}]]})}function y({webformatURL:n,largeImageURL:o,tags:r,likes:i,views:e,comments:t,downloads:s}){return`
   <ul class="card">
     <a class="gallery-link" href="${o}">
-      <img class="gallery-image" src="${s}" alt="${n}">
+      <img class="gallery-image" src="${n}" alt="${r}">
     </a>
     <ul class="item-img">
       <li class="elem-img">
         <p class="elem-name">Likes</p>
-        <p>${r}</p>
+        <p>${i}</p>
       </li>
       <li class="elem-img">
         <p class="elem-name">Views</p>
@@ -36,7 +36,7 @@ import{S as m,i as l}from"./assets/vendor-46aac873.js";(function(){const o=docum
       </li>
       <li class="elem-img">
         <p class="elem-name">Downloads</p>
-        <p>${i}</p>
+        <p>${s}</p>
       </li>
     </ul>
   </ul>

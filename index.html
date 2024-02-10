@@ -2,7 +2,7 @@
 <html class="window" lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-10/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework 11</title>
     <link
@@ -13,26 +13,24 @@
     <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-46aac873.js">
     <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-eb6030bc.css">
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/index-3c4187b8.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/index-120fac68.css">
   </head>
   <body>
-    <!-- Форма пошуку -->
     <form id="searchForm" class="search-form">
-      <label>
-        Search images:
-        <input type="text" id="searchInput" required />
-      </label>
+      <input
+        type="text"
+        name="keyword"
+        placeholder="Search images..."
+        required=""
+      />
       <button type="submit">Search</button>
     </form>
 
-    <!-- Зона для відображення повідомлень та індикатора завантаження -->
     <div id="messageContainer" class="message-container"></div>
     <div id="loader" class="loader"></div>
 
-    <!-- Галерея зображень -->
     <div id="gallery" class="gallery"></div>
 
-    <!-- Підключення скриптів -->
     
     <script
       type="module"
