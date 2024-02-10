@@ -1,8 +1,8 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import dangIcon from './img/dang.svg';
-import errorIcon from './img/err.svg';
-import xIcon from './img/x.svg';
+// import dangIcon from './img/dang.svg';
+// import errorIcon from './img/err.svg';
+// import xIcon from './img/x.svg';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
@@ -29,7 +29,7 @@ function fetchImage(keyWord) {
     const BASE_URL = 'https://pixabay.com/';
     const END_POINT = 'api/';
     const PARAMS = new URLSearchParams({
-        key: 'YOUR_PIXABAY_API_KEY', // Replace with your actual API key
+        key: '42208232-118910d8102453b47e924ae6c',
         q: keyWord,
         image_type: 'photo',
         orientation: 'horizontal',

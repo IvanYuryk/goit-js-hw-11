@@ -12,23 +12,21 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- Форма пошуку -->
     <form id="searchForm" class="search-form">
-      <label>
-        Search images:
-        <input type="text" id="searchInput" required />
-      </label>
+      <input
+        type="text"
+        name="keyword"
+        placeholder="Search images..."
+        required=""
+      />
       <button type="submit">Search</button>
     </form>
 
-    <!-- Зона для відображення повідомлень та індикатора завантаження -->
     <div id="messageContainer" class="message-container"></div>
     <div id="loader" class="loader"></div>
 
-    <!-- Галерея зображень -->
     <div id="gallery" class="gallery"></div>
 
-    <!-- Підключення скриптів -->
     <script type="module" src="./main.js"></script>
     <script
       type="module"
