@@ -169,3 +169,7 @@ input[type='text']:focus {
     box-shadow: 0 0 0 10px inset;
   }
 }
+
+.loader.hide {
+  display: none;
+}
